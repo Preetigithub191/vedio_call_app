@@ -24,7 +24,7 @@ app.get('/token', (req, res) => {
   if (!channelName) return res.status(400).json({ error: 'channel query param required' });
 
   // token expiry in seconds (e.g., 1 hour)
-  const expirationTimeInSeconds = 3600;
+  const expirationTimeInSeconds = 86400;
   const currentTimestamp = Math.floor(Date.now() / 1000);
   const privilegeExpireTs = currentTimestamp + expirationTimeInSeconds;
 
